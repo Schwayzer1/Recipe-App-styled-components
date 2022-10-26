@@ -1,7 +1,28 @@
 import React from "react";
+import { RecipeDiv, RecipeCards, Button } from "./Home.styled";
 
-const RecipeCard = () => {
-  return <div>RecipeCard</div>;
+const RecipeCard = ({ recipes }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(e.target.id);
+  };
+  return (
+    <RecipeDiv>
+      {recipes.map((recipe) => {
+        const { uri, images, label } = recipe.recipe;
+        const recipeID = uri.split("recipe_")[1];
+        return (
+          <RecipeCards>
+            <h3>{label}</h3>
+            <img src={images?.SMALL.url} width="200px" alt="recipe" />
+            <Button onClick={handleClick} id={recipeID}>
+              View More
+            </Button>
+          </RecipeCards>
+        );
+      })}
+    </RecipeDiv>
+  );
 };
 
 export default RecipeCard;

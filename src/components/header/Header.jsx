@@ -1,11 +1,13 @@
 import React from "react";
 import Form from "./Form";
+import { Head } from "./Header.styled";
 
-const Header = () => {
+const Header = ({ setRecipes }) => {
   return (
-    <div>
-      <Form />
-    </div>
+    <Head>
+      <h1>Food App</h1>
+      <Form setRecipes={setRecipes} />
+    </Head>
   );
 };
 

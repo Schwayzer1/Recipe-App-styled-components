@@ -1,11 +1,14 @@
-import { NavLink } from "react-router-dom";
 import { Anchor, StyledNavLink } from "../navbar/Navbar.styled";
 import StyledNavbar from "../navbar/Navbar.styled";
+import meal2 from "../../assets/meal2.svg";
 
 const Navbar = () => {
   return (
     <StyledNavbar>
-      <StyledNavLink to="/">RECIPE</StyledNavLink>
+      <StyledNavLink to="/" primary>
+        <img src={meal2} width="50px" alt="" />
+        RECIPE
+      </StyledNavLink>
       <div>
         <StyledNavLink to="/about">ABOUT</StyledNavLink>
         <Anchor
