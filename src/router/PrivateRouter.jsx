@@ -1,8 +1,20 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import Navbar from "../components/navbar/Navbar";
 
-const PrivateRouter = ({ login }) => {
-  return <>{login ? <Outlet /> : <Navigate to="/login" />}</>;
+const PrivateRouter = ({ login, component }) => {
+  return (
+    <>
+      {login ? (
+        <>
+          {" "}
+          <Navbar /> {component}
+        </>
+      ) : (
+        <Navigate to="/login" />
+      )}
+    </>
+  );
 };
 
 export default PrivateRouter;
