@@ -5,7 +5,7 @@ import StyledNavbar from "../navbar/Navbar.styled";
 const Navbar = () => {
   return (
     <StyledNavbar>
-      <NavLink to="/">Recipe</NavLink>
+      <StyledNavLink to="/">RECIPE</StyledNavLink>
       <div>
         <StyledNavLink to="/about">ABOUT</StyledNavLink>
         <Anchor
