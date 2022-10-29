@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledAbout = styled.div`
+  height: 87vh;
   background-color: #f2b263;
   display: flex;
   justify-content: center;
