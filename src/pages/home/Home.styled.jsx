@@ -14,6 +14,7 @@ export const RecipeDiv = styled.div`
 `;
 
 export const RecipeCards = styled.div`
+  background-color: lightgray;
   text-align: center;
   width: 350px;
   height: 350px;
@@ -27,11 +28,17 @@ export const RecipeCards = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 2rem;
 `;
 
 export const Button = styled.button`
+  background-color: #00adb5;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: lightgray;
   margin-top: 1rem;
   padding: 0.7rem;
+  border: none;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
