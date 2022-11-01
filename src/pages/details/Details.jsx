@@ -2,8 +2,9 @@ import axios from "axios";
 import ReactLoading from "react-loading";
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import DetailsDiv, {
+  BackButton,
   ImageDiv,
   Nutritions,
   RecipeDiv,
@@ -15,6 +16,10 @@ const Details = () => {
   const [loading, setLoading] = useState(true);
   const [recipe, setRecipe] = useState();
   const params = useParams();
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(-1);
+  };
   useEffect(() => {
     const load = () => {
       try {
@@ -101,7 +106,12 @@ const Details = () => {
     }
   };
 
-  return <DetailsDiv>{createResult()}</DetailsDiv>;
+  return (
+    <DetailsDiv>
+      {createResult()}
+      <BackButton onClick={handleClick}>Go Back</BackButton>
+    </DetailsDiv>
+  );
 };
 
 export default Details;

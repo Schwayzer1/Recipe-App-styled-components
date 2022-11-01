@@ -36,6 +36,22 @@ const ImageDiv = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const BackButton = styled.button`
+  margin-top: 1rem;
+  background-color: red;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+`;
 
 export default DetailsDiv;
-export { RecipeDiv, Nutritions, RecipeHeader, RecipeTitle, ImageDiv };
+export {
+  RecipeDiv,
+  Nutritions,
+  RecipeHeader,
+  RecipeTitle,
+  ImageDiv,
+  BackButton,
+};
