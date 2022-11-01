@@ -14,7 +14,7 @@ const RecipeCard = ({ recipes }) => {
       {recipes.map((recipe) => {
         const { uri, images, label } = recipe.recipe;
         const recipeID = uri.split("recipe_")[1];
-        // console.log(recipeID);
+
         return (
           <RecipeCards>
             <h3>{label}</h3>
