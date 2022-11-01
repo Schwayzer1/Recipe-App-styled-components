@@ -7,7 +7,7 @@ const RecipeCard = ({ recipes }) => {
   const handleClick = (e) => {
     e.preventDefault();
     console.log(e.target.id);
-    navigate("/details");
+    navigate(`/details/${e.target.id}`);
   };
   return (
     <RecipeDiv>

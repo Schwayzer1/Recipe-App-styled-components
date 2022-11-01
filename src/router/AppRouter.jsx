@@ -22,7 +22,7 @@ const AppRouter = () => {
           element={<PrivateRouter login={login} component={<About />} />}
         />
         <Route
-          path="/details"
+          path="/details/:id"
           element={<PrivateRouter login={login} component={<Details />} />}
         />
       </Routes>
