@@ -36,6 +36,7 @@ const Details = () => {
       }
     };
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const createResult = () => {
